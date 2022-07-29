@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="./css/bookshop.css" rel="stylesheet">
+    <title>민음사</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<header>
+    <div>
+        <a href="./index.html"><img src="./img/logo.png" alt="logo" class="logo"></a>
+        <nav>
+            <ul class="menu">
+                <li>
+                    <span><a href="#">민음사 소개</a></span>
+                </li>
+                <li>
+                    <span><a href="#">도서 소개</a></span>
+                </li>
+                <li>
+                    <span><a href="#">책의 사생활</a></span>
+                </li>
+                <li>
+                    <span><a href="./bookshop.html">북클럽</a></span>
+                </li>
+                <li style="cursor: pointer;" class="search_btn_header">
+                    <img src="./img/search_btn_header.png">
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="search">
+    <div class="close" style="cursor: pointer;">
+        <div class="line-box">
+            <span class="line-01"></span>
+            <span class="line-02"></span>
+        </div>
+    </div>
+    <form id="form">
+        <div class="search_bar">
+            <input type="text" id="search" 
+            placeholder="검색어를 입력해주세요." />
+            <img src="./img/search_btn_big.png" id="searchBtn">
+        </div>
+    </form>
+    <div class="fast">
+        <a href="#"><span>김수영</span></a>
+        <a href="#"><span>무라카미 하루키</span></a>
+        <a href="#"><span>데미안</span></a>
+        <a href="#"><span>호밀밭의 파수꾼</span></a>
+    </div>
+</div>
+
+<main>
+    <div class="minum_bookshop">
+        <img src="./img/bookshop/bookclub_image.png" id="tab-1" class="bookshop_main_content current">
+        <img src="./img/bookshop/bookshop_image.png" id="tab-2" class="bookshop_main_content">
+    </div>
+    <div class="bookshop_menu">
+        <a class="bookshop_tab current" data-tab="tab-1" rel="test-1">민음사 북클럽</a>
+        <a class="bookshop_tab" data-tab="tab-2" rel="test-2">민음 BOOK SHOP</a>
+    </div>
+    <div id="test-1" class="bookshop_tab_content current">
+        <div class="bookclub">
+            <div class="bookclub_box">
+                <p class="bookclub_first">
+                    혼자 읽고 끝나는 책 읽기에 지루함을 느낀 적이 있지 않았나요?<br>
+                    <br>
+                    민음북클럽 독서 행사를 통해 다양한 책을 독파하고,<br>
+                    커뮤니티에서 나의 독서 경험을 사람들과 마음껏 주고 받으며,<br>
+                    기억에 남을 멋진 독서 생활을 즐겨보세요,<br>
+                    <br>
+                    오로지 책을 좋아한다는 공통점 하나로 모인 가지가색의 우리끼리<br>
+                    북클럽 활동으로 우리들만의 왁자지껄 이야기를 쌓아가요.<br>
+                </p>
+                <div class="bookclub_box_image">
+                    <img src="./img/bookshop/bookclub_image01.png">
+                    <img src="./img/bookshop/bookclub_image02.png">
+                </div>
+                <div class="bookclub_info">
+                    <img src="./img/bookshop/bookclub_image03.png">
+                    <div class="bookclub_info_w">
+                        <p>민음북클럽은 연간 회원 서비스로<br>
+                            가입 시 민음사 세계문학전집/세계시인선/오늘<br>
+                            의 젊은 작가 시리즈 중 3권과 북클럽 회원만 소<br>
+                            장할 수 있는 에디션 7종 중 3권을 선택하여 총<br>
+                            6권의 도서와 함께<br>
+                            북파우치, 노트패드, 한 줄 노트 등을 가입 선물<br>
+                            로 증정합니다.<br>
+                            <br>
+                            그 외에도 이번에 새롭게 오픈되는 독서 커뮤니<br>
+                            티에서 활동할 수 있으며, 리퍼브 도서를 포인트<br>
+                            차감 할인하여 구매할 수 있는 패밀리데이를 포<br>
+                            함하여 북클럽 회원들을 위한 독서 모임 행사와<br>
+                            다양한 이벤트에 참여할 수 있습니다.
+                        </p>
+                        <div>
+                            <b>민음 북클럽 혜택 요약!<br></b>
+                            <p>
+                                1. 민음북클럽 커뮤니티 이용 가능 (기간 : 2023<br>
+                                년 3월 31일까지)<br>
+                                2. 온/오프라인 패밀리데이 정기 기준 기본 10%<br>
+                                할인 + 최대 40%까지 포인트 차감 할인 혜택<br>
+                                3. 온/오프라인 독서모임, 민음 북샵 이용 시 포<br>
+                                인트 차감 할인 혜택 제공<br>
+                                4. 각종 활동을 통하여 e-스탬프 적립 이벤트 참<br>
+                                여가능(기간 : 2023년 3월 31일까지)<br>
+                                5. 민음북클럽 회원만을 위한 영화/연극/전시 관<br>
+                                람권 게릴라 이벤트 우선 참여 가능<br>
+                                6. 민음사에서 진행하는 다양한 문화 행사 우선 알림 
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./img/bookshop/MINUMSA.png">
+                </div>
+                <div class="bookclub_gift">
+                    <img src="./img/bookshop/bookclub_image06.png">
+                    <div class="bookclub_gift_1">
+                        <b>북클럽 선택 도서</b>
+                        <p>장편과 단편, 시집까지 아우르며 모두의 취향을 고려한 일곱 권의 북클럽 에디션,<br>
+                            <br>
+                            매년 에디션을 사랑해주시는 회원분들의 응원에 힘 입어<br>
+                            2022 북클럽 에디션은 선택의 폭과 다양성을 더욱 넓혔습니다.<br>
+                            <br>
+                            나의 취향대로 내가 읽고 싶은 책을 선택할 수 있는<br>
+                            민음북클럽 웰컵도서 7종 중 3권 선택
+                        </p>
+                        <img src="./img/bookshop/bookclub_image04.png">
+                    </div>
+                    <img src="./img/bookshop/+.png">
+                    <div class="bookclub_gift_2">
+                        <p>나의 취향대로 내가 읽고 싶은 책을 선택할 수 있는<br>
+                            민음북클럽 웰컴도서 489종 중 3권 선택!<br>
+                            <br>
+                            올해 400권 출간을 맞이한 세계문학전집.<br>
+                            세계의 명시를 원문과 함께 만날 수 있는 세계시인선,<br>
+                            뜨거운 주목을 받고 있는 국내작가들의 작품을 담은 오늘의 젊은 작가 시리즈,<br>
+                            다양한 책들 중 원하는 책을 직접 선택해 보세요.
+                        </p>
+                        <img src="./img/bookshop/bookclub_image05.png">
+                    </div>
+                </div>
+                <button><img src="./img/bookshop/bookclub_image07.png"></button>
+                <div class="bookclub_log">
+                    <div>
+                        <div class="bookclub_log_close" style="cursor: pointer;">
+                            <div class="bookclub_log_close_line-box">
+                                <span class="bookclub_log_close_line-01"></span>
+                                <span class="bookclub_log_close_line-02"></span>
+                            </div>
+                        </div>
+                        <img src="./img/bookshop/bookclub_log/bookclub_log.png" class="bookclub_log_image">
+                        <p><span>죄송합니다.</span><br>
+                            <br>
+                            2022 민음 북클럽 모집이 마감되었습니다.
+                        </p>
+                        <img src="./img/bookshop/bookclub_log/logo.png" class="bookclub_log_logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="test-2" class="bookshop_tab_content">
+        <div class="bookshop_item">
+            <ul>
+                <!-- <li>
+                    <div class="bookshop_item_box_1">
+                        <a href="#">
+                            <img src="../url.jpg" class="bookshop_item_first_img">
+                        </a>
+                    </div>
+                    <div class="bookshop_item_box_2">
+                        <b>상품명</b>
+                        <p>가격 : 원</p>
+                        <button></button>
+                    </div>
+                </li>
+                <li>
+                    <div class="bookshop_item_box_1">
+                        <a href="#">
+                            <img src="../url.jpg" class="bookshop_item_first_img">
+                        </a>
+                    </div>
+                    <div class="bookshop_item_box_2">
+                        <b>상품명</b>
+                        <p>가격 : 원</p>
+                        <button></button>
+                    </div>
+                </li>
+                <li>
+                    <div class="bookshop_item_box_1">
+                        <a href="#">
+                            <img src="../url.jpg" class="bookshop_item_first_img">
+                        </a>
+                    </div>
+                    <div class="bookshop_item_box_2">
+                        <b>상품명</b>
+                        <p>가격 : 원</p>
+                        <button></button>
+                    </div>
+                </li>
+                <li>
+                    <div class="bookshop_item_box_1">
+                        <a href="#">
+                            <img src="../url.jpg" class="bookshop_item_first_img">
+                        </a>
+                    </div>
+                    <div class="bookshop_item_box_2">
+                        <b>상품명</b>
+                        <p>가격 : 원</p>
+                        <button></button>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="pup" id="pup">
+        <div class="pup_wrap">
+            <!-- <div class="pup_left">
+                <div class="pupL_cont">
+                    <div class="pupL_cont_img">
+                        <div><img src="./img/bookshop/08_00.png"></div>
+                        <ul>
+                            <li><img src="./img/bookshop/08_00.png"></li>
+                            <li><img src="./img/bookshop/08_01.jpg"></li>
+                            <li><img src="./img/bookshop/08_02.jpg"></li>
+                            <li><img src="./img/bookshop/08_03.jpg"></li>
+                            <li><img src="./img/bookshop/08_04.jpg"></li>
+                            <li><img src="./img/bookshop/08_05.jpg"></li>
+                        </ul>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pup_right">
+                <div class="pupR_cont">
+                        <h2>메모 MD (인덱스 북 클립)</h2>
+                        <span class="pupR_cont_price">9000원</span>
+                        <hr class="pupR_cont_line_1" size="2">
+                        <figure>민음사 메모 굿즈 2종이 나왔습니다. \n - \n 민음북클럽 가입선물로 드리는 메모 굿즈를 직접 사용해 보신 분들의 설문을 토대로, \n 좋은 점만 추려서 추가한 상품입니다. \n 민음북클럽 메모 상품 중 가장 호응이 좋았던 북마크를 \n 단일로 구성한 상품입니다.\n - \n 글이나 그림을 그려 기억하고 싶은 페이지에 꽂아놓으면 \n 나만의 기록이 담긴 책갈피로 사용할 수 있습니다. \n 세 가지 색상으로 수량을 넉넉하게 준비하여 양껏 사용할 수 있어요. \n ※ 실물과 색상 차이가 있을 수 있습니다 ※</figure>
+                        <hr class="pupR_cont_line_2" size="2">
+                        <p>민음 BOOK SHOP</p>
+                </div>
+            </div>
+            <div class="btn">
+                <div class="btn_X" style="cursor: pointer;">
+                    <div class="btn_X_line-box">
+                        <span class="btn_X_line-01"></span>
+                        <span class="btn_X_line-02"></span>
+                    </div>
+                </div>
+                <button class="btn_prev">prev</button>
+                <button class="btn_next">next</button>
+            </div> -->
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="foot">
+        <div class="minumsa"><img src="./img/footer_logo.png" alt="logo_w"></div>
+        <div class="sns">
+            <a href="#"><img src="./img/sns/blog.png" alt="블로그"></a>
+            <a href="#"><img src="./img/sns/youtube.png" alt="유튜브"></a>
+            <a href="#"><img src="./img/sns/facebook.png" alt="페이스북"></a>
+            <a href="#"><img src="./img/sns/twitter.png" alt="트위터"></a>
+        </div>
+        <ul class="name">
+            <li>
+                Kwak Ji- hyun<br>
+                Designer<br>
+                tbj6160@naver.com
+            </li>
+            <li>
+                Park Gun-woo<br>
+                Publisher<br>
+                fuzzywavy@gmail.com
+            </li>
+            <li>
+                Choi Yun-sun<br>
+                Publisher<br>
+                gggdbstjs0@naver.com
+            </li>
+        </ul>
+        <span></span>
+        <div class="info">
+            회원약관 | 개인정보처리방침 | 문의 | 2차 저작권 문의 가이드 : 국내 저작물 / 해외 저작물 | 위치 및 연락처 | 사이트맵 | 소식 RSS | 민음사 도서 RSS | ENGLISH<br>
+            (주)민음북스 | 대표이사: 박상준 | 사업자등록번호: 211-88-41803 | 통신판매업 신고번호: 제2010-서울강남-00971호<br>   
+            주소: 서울시 강남구 신사동 506 강남출판문화센터 5층 | 새주소: 서울시 강남구 도산대로 1길 62 5층<br> 
+            전화: 02-515-2000 | webmaster@minumsa.com
+        </div>
+    </div>
+</footer>
+
+<script>
+
+const SearchBtn = document.querySelector('.search_btn_header'),
+    Search = document.querySelector('.search'),
+    Close = document.querySelector('.close');
+SearchBtn.addEventListener('click',function(){
+    Search.classList.add('active');});
+Close.addEventListener('click',function(){
+    Search.classList.remove('active');});
+
+$(document).ready(function(){
+    $('div.bookshop_menu a').click(function(){
+        var tab_id = $(this).attr('data-tab');
+        var test_id = $(this).attr('rel');
+        $('div.bookshop_menu a').removeClass('current');
+        $('div.bookshop_tab_content').removeClass('current');
+        $('img.bookshop_main_content').removeClass('current');
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+        $("#"+test_id).addClass('current');
+    })
+})
+
+fetch('bookshop.json')
+    .then(function(item){    return item.json()   })
+    .then(function(shopData){ 
+
+        const UlShop = document.querySelector('.bookshop_item ul');
+        
+        function bookshopItem(){
+            let tags = [];
+            let list = '';
+
+            shopData.bookshop_list.forEach(function(v){            
+                tags.push(`
+                <li>
+                    <div class="bookshop_item_box_1">
+                        <img src="${v.main}" class="bookshop_item_first_img">
+                    </div>
+                    <div class="bookshop_item_box_2">
+                        <b>${v.item}</b>
+                        <p>가격 : ${v.price}원</p>
+                        <button>
+                            <img src="./img/heart_off.svg">
+                        </button>
+                    </div>
+                </li>`)
+            });
+            tags.forEach(function(v){
+            list += v;
+            });
+            UlShop.innerHTML = list;
+
+            let good = [];
+            $('.bookshop_item_box_2 button').on('click',function(){
+                let idx = $(this).parents('li').index();
+                good.push(idx);
+                localStorage.heart = good;
+                $(this).find('img').attr('src',"./img/heart_on.svg");});
+
+            $('.bookshop_item_first_img').on('click',function(){
+                $('.pup').show();
+            });
+            $('.btn_X').on('click',function(){
+                $('.pup').hide();
+            });
+
+        //     shopData.bookshop_list.forEach(function(d){
+                
+        //         tagsdetail.push(`
+        //         <div class="pup_left">
+        //         <div class="pupL_cont">
+        //             <div class="pupL_cont_img">
+        //                 <div><img src=${d[1].main}></div>
+        //                 <ul>
+        //                     <li><img src=${d[1].image}></li>
+        //                 </ul>
+        //                 <p></p>
+        //             </div>
+        //         </div>
+        //     </div>
+        //     <div class="pup_right">
+        //         <div class="pupR_cont">
+        //                 <h2>${d[1].item}</h2>
+        //                 <span class="pupR_cont_price">${d[1].price}원</span>
+        //                 <hr class="pupR_cont_line_1" size="2">
+        //                 <figure>${d[1].text}</figure>
+        //                 <hr class="pupR_cont_line_2" size="2">
+        //                 <p>민음 BOOK SHOP</p>
+        //         </div>
+        //     </div>
+        //     <div class="btn">
+        //         <div class="btn_X" style="cursor: pointer;">
+        //             <div class="btn_X_line-box">
+        //                 <span class="btn_X_line-01"></span>
+        //                 <span class="btn_X_line-02"></span>
+        //             </div>
+        //         </div>
+        //         <button class="btn_prev">prev</button>
+        //         <button class="btn_next">next</button>
+        //     </div>`)
+        //     });
+        //     tagsdetail.forEach(function(d){
+        //     listdetail += d;
+        //     });
+        //     UlItem.innerHTML = listdetail;
+        // }
+        }
+        bookshopItem();
+        // bookshopItemDetail();
+});
+
+function bookshop_Thumb(){
+    const elThumb = document.querySelectorAll('.pupL_cont_img li'),
+        elDetail = document.querySelector('.pupL_cont_img > div > img'),
+        elPtag = document.querySelector('.pupL_cont_img p');
+        let elOffset = [];
+        elThumb.forEach(function(el,key){
+            elOffset.push(
+                {
+                    w:el.offsetWidth,
+                    h:el.offsetHeight,
+                    x:el.offsetLeft,
+                    y:el.offsetTop
+                }                    
+            )
+            el.onclick = function(){    
+                elDetail.src = el.children[0].src;
+                elPtag.style = `
+                    width:${el.offsetWidth}px; 
+                    height:${el.offsetHeight}px;
+                    left:${el.offsetLeft}px; 
+                    top:${el.offsetTop}px;
+                `;
+            }   
+        }
+    )
+}
+    window.onload = bookshop_Thumb;
+
+const Bookclub_Btn = document.querySelector('.bookclub_box > button'),
+Bokkclub_log = document.querySelector('.bookclub_log'),
+Bookclub_Close = document.querySelector('.bookclub_log_close');
+Bookclub_Btn.addEventListener('click',function(){
+Bokkclub_log.classList.add('active');});
+Bookclub_Close.addEventListener('click',function(){
+Bokkclub_log.classList.remove('active');});
+
+
+var SearchValue ;
+    searchBtn.addEventListener('click', function(){
+        SearchValue = search.value;
+        dataAjax();        
+    });
+
+function abc(success, data){
+    // console.log(success);        
+    let str = '';
+    let searchData = data.item.filter( (d)=>{
+            str = d.author + d.title;
+            if(str.match(SearchValue)) return d;
+        }
+    );
+    console.log(searchData)
+}
+
+function dataAjax(){
+
+    $.ajax({
+            method: "get",
+            dataType:"jsonp",
+            jsonp:"abc",
+            url: "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx",
+            data: { 
+                Query:"민음사",
+                QueryType:"Publisher",
+                TTBKey:"ttbgggdbstjs1055001",
+                output:"JS",
+                cover:"big",
+                callback:"abc",
+                Sort:"Accuracy",
+                MaxResults: "100"
+            }
+        })
+}
+
+
+</script>
+
+</html>

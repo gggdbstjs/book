@@ -1,0 +1,677 @@
+html,
+body {
+  margin: 0;
+  font-size: 18px;
+  background-color: #F5F1E8;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+header div {
+  width: 80%;
+}
+header div .logo {
+  position: absolute;
+  left: 10%;
+  top: 23%;
+}
+header div .menu {
+  display: flex;
+  justify-content: space-between;
+  font-weight: lighter;
+  position: absolute;
+  right: 10%;
+  top: 23%;
+}
+header div .menu li {
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+}
+header div .menu li span {
+  padding: 12px;
+}
+header div .menu li:hover span {
+  border: 1px solid #fff;
+  background-color: #fff;
+  border-radius: 30px;
+}
+header div .menu li:nth-child(6) {
+  margin-left: 20px;
+}
+
+.search {
+  width: 80.7%;
+  height: 45%;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  left: 10.1%;
+  top: 7%;
+  display: none;
+  z-index: 2;
+}
+.search.active {
+  display: block;
+}
+.search .close {
+  position: relative;
+  width: 3%;
+  height: 3%;
+  float: right;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.search .close .line-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+.search .close .line-box span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.search .close .line-box .line-01 {
+  transform: rotate(135deg) translateX(0%);
+}
+.search .close .line-box .line-02 {
+  transform: rotate(45deg) translateX(0%);
+}
+.search form {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-items: auto;
+  position: absolute;
+  top: 23%;
+  left: 15%;
+  border: none;
+  border-bottom: 2px black solid;
+  width: 70%;
+  height: 22%;
+}
+.search .search_bar {
+  z-index: 1;
+  opacity: 1;
+}
+.search .search_bar input {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  margin-left: 10%;
+  z-index: -1;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+.search .search_bar input::-moz-placeholder {
+  color: rgba(168, 168, 168, 0.34);
+  font-size: 30px;
+}
+.search .search_bar input:-ms-input-placeholder {
+  color: rgba(168, 168, 168, 0.34);
+  font-size: 30px;
+}
+.search .search_bar input::placeholder {
+  color: rgba(168, 168, 168, 0.34);
+  font-size: 30px;
+}
+.search .search_bar input:focus {
+  outline: none;
+}
+.search .search_bar img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 3%;
+  top: 15%;
+  cursor: pointer;
+  float: right;
+}
+.search .fast {
+  position: absolute;
+  left: 30%;
+  top: 60%;
+}
+.search .fast a span {
+  border: none;
+  background-color: #F5F1E8;
+  border-radius: 30px;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.search .fast a:hover {
+  color: white;
+}
+.search .fast a:hover span {
+  background-color: #471260;
+}
+
+footer {
+  width: 100%;
+  height: 490px;
+  background-color: #471260;
+  font-size: 30px;
+  color: #fff;
+  position: relative;
+}
+footer .foot {
+  width: 66.5%;
+  height: 100%;
+  margin: 5% auto;
+}
+footer .foot .minumsa {
+  position: absolute;
+  top: 16%;
+  left: 18%;
+  text-align: center;
+}
+footer .foot .sns {
+  text-align: center;
+  position: absolute;
+  left: 30%;
+  top: 17%;
+}
+footer .foot .name {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  position: absolute;
+  bottom: 46%;
+  left: 30%;
+  line-height: 30px;
+  font-size: 18px;
+}
+footer .foot span {
+  width: 65%;
+  border: 1px solid #fff;
+  position: absolute;
+  bottom: 38%;
+}
+footer .foot .info {
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3%;
+  line-height: 20px;
+}
+
+main {
+  width: 1920px;
+}
+main .minum_bookshop {
+  width: 80%;
+  margin: 0 auto;
+  width: 1536px;
+  height: 662px;
+  position: relative;
+}
+main .minum_bookshop .bookshop_main_content {
+  display: none;
+}
+main .minum_bookshop .bookshop_main_content.current {
+  display: inherit;
+}
+main .bookshop_menu {
+  margin: 0 auto;
+  width: 361px;
+  height: 38px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  font-size: 20px;
+}
+main .bookshop_menu a {
+  cursor: pointer;
+}
+main .bookshop_menu a:nth-child(1) {
+  float: left;
+}
+main .bookshop_menu a:nth-child(2) {
+  float: right;
+}
+main .bookshop_menu a.current {
+  border: solid #471160;
+  border-width: 2px 0 2px 0;
+}
+main .bookshop_tab_content {
+  margin: 0 auto;
+  width: 80%;
+  display: none;
+}
+main .bookshop_tab_content.current {
+  display: inherit;
+}
+main .bookshop_tab_content .bookshop_item {
+  margin: 0 auto;
+  margin-bottom: 150px;
+}
+main .bookshop_tab_content .bookshop_item ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .bookshop_tab_content .bookshop_item ul li {
+  display: block;
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_1 {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_1 .bookshop_item_first_img {
+  width: 350px;
+  height: 350px;
+  transition: all 0.5s ease-in;
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_1:hover img {
+  transform: scale(1.2);
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_2 {
+  width: 350px;
+  height: 140px;
+  margin-bottom: 150px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_2 b {
+  cursor: pointer;
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_2 p {
+  font-size: 20px;
+  display: block;
+  margin-top: 8px;
+}
+main .bookshop_tab_content .bookshop_item ul li .bookshop_item_box_2 button {
+  width: 41px;
+  height: 48px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  outline: none;
+}
+main .bookshop_tab_content .bookclub {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_first {
+  padding: 15% 0 10% 0;
+  font-size: 28px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_box_image img:nth-of-type(1) {
+  padding-bottom: 15%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_box_image img:nth-of-type(2) {
+  padding-bottom: 10%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info {
+  width: 58.7%;
+  height: 922px;
+  border: 20px solid #fff;
+  margin: 0 auto;
+  text-align: start;
+  vertical-align: middle;
+  display: flex;
+  position: relative;
+  font-weight: bold;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info img:nth-of-type(1) {
+  margin: 8%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info .bookclub_info_w {
+  width: 40%;
+  position: absolute;
+  right: 10%;
+  top: 12%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info .bookclub_info_w p {
+  font-size: 16px;
+  line-height: 23px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info .bookclub_info_w div {
+  margin-top: 8%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info .bookclub_info_w div b {
+  font-size: 18px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info .bookclub_info_w div p {
+  margin-top: 9px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_info img:nth-of-type(2) {
+  position: absolute;
+  bottom: 5%;
+  right: 4%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding-top: 8%;
+  position: relative;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift .bookclub_gift_1 {
+  margin: 10% 0;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift .bookclub_gift_1 b {
+  font-size: 18px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift .bookclub_gift_1 p {
+  font-size: 18px;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift .bookclub_gift_2 {
+  margin-top: 10%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift .bookclub_gift_2 p {
+  font-size: 18px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_gift .bookclub_gift_2 img {
+  margin-top: 5%;
+  padding-bottom: 15%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box button {
+  padding: 10% 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log {
+  display: block;
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  background-color: #fff;
+  left: 20%;
+  top: 5%;
+  display: none;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log.active {
+  display: block;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_close {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  float: right;
+  margin-right: 33px;
+  margin-top: 33px;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_close .bookclub_log_close_line-box {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_close .bookclub_log_close_line-box span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_close .bookclub_log_close_line-box .bookclub_log_close_line-01 {
+  transform: rotate(135deg) translateX(0%);
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_close .bookclub_log_close_line-box .bookclub_log_close_line-02 {
+  transform: rotate(45deg) translateX(0%);
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_image {
+  width: 100%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log img {
+  padding-top: 2%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log p {
+  font-size: 50px;
+  padding-top: 15%;
+  line-height: 90%;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log p span {
+  font-weight: bold;
+}
+main .bookshop_tab_content .bookclub .bookclub_box .bookclub_log .bookclub_log_logo {
+  position: absolute;
+  bottom: 5%;
+  right: 2.5%;
+}
+main .pup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  z-index: 999;
+  display: none;
+}
+main .pup:active {
+  display: block;
+}
+main .pup .pup_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56%;
+  height: 83%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px #000000;
+}
+main .pup .pup_wrap .pup_left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  border: 1px solid #000;
+}
+main .pup .pup_wrap .pup_left .pupL_cont {
+  width: 88%;
+  height: 150%;
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img {
+  width: 100%;
+  height: 100%;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img img {
+  vertical-align: top;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img div {
+  margin: 0 auto;
+  width: 90%;
+  height: 28%;
+  margin-top: 10px;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img div img {
+  width: 100%;
+  height: 100%;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin: 20px 50px 0 50px;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img ul li {
+  width: 45%;
+  height: 20%;
+  z-index: 2;
+  margin-bottom: 5px;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img ul li img {
+  width: 100%;
+  height: 100%;
+}
+main .pup .pup_wrap .pup_left .pupL_cont .pupL_cont_img p {
+  border: 2px solid #471160;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0s;
+  margin: 0;
+  z-index: 2;
+}
+main .pup .pup_wrap .pup_right {
+  width: 50%;
+  height: 100%;
+  border-right: solid 2px #000000;
+  position: relative;
+  border: 1px solid #000;
+}
+main .pup .pup_wrap .pup_right .pupR_cont {
+  height: 700px;
+  padding: 5px 0;
+}
+main .pup .pup_wrap .pup_right .pupR_cont h2 {
+  width: 80%;
+  background-color: #471160;
+  background-size: contain;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-size: 36px;
+}
+main .pup .pup_wrap .pup_right .pupR_cont .pupR_cont_price {
+  background-color: #471160;
+  color: #ffffff;
+  padding: 10px 20px 10px 15px;
+  font-weight: bold;
+  position: fixed;
+  top: 18%;
+}
+main .pup .pup_wrap .pup_right .pupR_cont .pupR_cont_line_1 {
+  width: 424px;
+  position: fixed;
+  left: 55%;
+  top: 25%;
+}
+main .pup .pup_wrap .pup_right .pupR_cont .pupR_cont_line_2 {
+  width: 424px;
+  position: fixed;
+  left: 55%;
+  bottom: 15%;
+}
+main .pup .pup_wrap .pup_right .pupR_cont figure {
+  width: 416px;
+  margin: 0 auto;
+  position: fixed;
+  left: 55.5%;
+  top: 30%;
+  font-size: 20px;
+  line-height: 30px;
+}
+main .pup .pup_wrap .pup_right .pupR_cont p {
+  background-color: #471160;
+  width: 60%;
+  color: #ffffff;
+  padding: 13px;
+  position: absolute;
+  bottom: 30px;
+}
+main .pup .pup_wrap .btn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+main .pup .pup_wrap .btn .btn_X {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  z-index: 1000;
+}
+main .pup .pup_wrap .btn .btn_X .btn_X_line-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+main .pup .pup_wrap .btn .btn_X .btn_X_line-box span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+main .pup .pup_wrap .btn .btn_X .btn_X_line-box .btn_X_line-01 {
+  transform: rotate(135deg) translateX(0%);
+}
+main .pup .pup_wrap .btn .btn_X .btn_X_line-box .btn_X_line-02 {
+  transform: rotate(45deg) translateX(0%);
+}
+main .pup .pup_wrap .btn .btn_prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin: 10px;
+}
+main .pup .pup_wrap .btn .btn_next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin: 10px;
+}/*# sourceMappingURL=bookshop.css.map */

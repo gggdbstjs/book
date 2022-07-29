@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+<title> </title>
+
+
+
+<script>
+
+function abc(success, data){
+            console.log(success);
+            console.log(data);
+
+        let str = '';
+        data.item.forEach(d => {
+            str = d.author + d.title;
+            if(str.match('김춘미')){
+                console.log(d)
+            }
+        });
+
+        let aaa = data.item.filter( (d)=>{
+            str = d.author + d.title;
+            if(str.match('지음')) return d;
+            }
+        );
+
+        console.log(aaa)
+
+
+
+
+
+            // var title=data.item[0].title;
+            //     var cover=data.item[0].cover;
+            //     var contents=data.item[0].description;
+            //     $("#title").append("<strong>"+title+"</strong>");
+            //     $("#content").append(contents);
+            //     var img = ("<img src='"+cover+"'/>");
+            //     $("#book_img").append(img);
+            // $("p").append(doc.price);
+
+                  //세계시인선
+                // let a = [], b = [];
+
+                // $.each(data,function(i){
+
+                //     if(data[i]['categoryName'].match('프랑스소설')){
+                //         // 값이 존재할때
+                //         a.push( data[i] );
+                //         console.log(a)
+                //     }
+
+                //     if(data[i]['분류'].match('시세계')){
+                //         // 값이 존재할때
+                //         b.push( data[i] );
+                //     }
+                // })
+
+        }
+        //요청에 대한 정보
+        $.ajax({
+            method: "get",
+            dataType:"jsonp",
+            jsonp:"abc",
+            url: "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx",
+            data: { 
+                Query:"민음사",
+                QueryType:"Publisher",
+                TTBKey:"ttbgggdbstjs1055001",
+                output:"JS",
+                cover:"big",
+                callback:"abc",
+                MaxResults:"10",
+                Sort:"SalesPoint"
+            }
+            
+
+        })
+
+        // function bookDisplay(success, data) {
+        //     console.log(data)
+        //     console.log(success)
+        // }
+
+
+        // $.ajax({
+        //     url: "https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=ttbgggdbstjs1055002&Query=%EB%AF%BC%EC%9D%8C%EC%82%AC&QueryType=Publisher&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20131101",
+        //     jsonp: 'bookDisplay',
+        //     dataType: "jsonp",
+        //     success:function(data){
+        //         console.log(data)
+        //     }
+        // })
+
+
+            // let xhr = new XMLHttpRequest();
+            // xhr.open('get','https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=ttbgggdbstjs1055001&Query=%EB%AF%BC%EC%9D%8C%EC%82%AC&QueryType=Publisher&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20131101',true);
+            // xhr.send(null);
+
+            // xhr.onreadystatechange = function(){
+            //     if(xhr.readyState === XMLHttpRequest.DONE) {
+            //     const status = xhr.status;
+            //     if (status === 0 || (status >= 200 && status < 400)) {
+                
+            //     console.log(xhr.responseText);
+            //     } else {
+                
+            //     }
+            // }
+            // }
+
+    </script>
+</body>
+</html>
