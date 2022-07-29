@@ -330,7 +330,7 @@ fetch('bookshop.json')
         function bookshopItem(){
             let tags = [];
             let list = '';
-
+            
             shopData.bookshop_list.forEach(function(v){            
                 tags.push(`
                 <li>
@@ -351,19 +351,67 @@ fetch('bookshop.json')
             });
             UlShop.innerHTML = list;
 
-            let good = [];
+            let good = [],idx=0;
             $('.bookshop_item_box_2 button').on('click',function(){
                 let idx = $(this).parents('li').index();
                 good.push(idx);
                 localStorage.heart = good;
                 $(this).find('img').attr('src',"./img/heart_on.svg");});
 
-            $('.bookshop_item_first_img').on('click',function(){
+            $('.bookshop_item li').on('click',function(){
+                idx = $(this).index();
                 $('.pup').show();
+                popupFn();
             });
-            $('.btn_X').on('click',function(){
-                $('.pup').hide();
-            });
+            
+
+            function popupFn(){
+                
+                let tagsdetail = '';
+                shopData.bookshop_list.forEach(function(v,i){ 
+                    if(idx == i){
+                        //start
+                        tagsdetail =  `<div class="pup_left">
+                            <div class="pupL_cont">
+                                <div class="pupL_cont_img">
+                                    <div><img src=${v.main}></div>
+                                    <ul>
+                                        <li><img src=${v.image}></li>
+                                    </ul>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pup_right">
+                            <div class="pupR_cont">
+                                    <h2>${v.item}</h2>
+                                    <span class="pupR_cont_price">${v.price}원</span>
+                                    <hr class="pupR_cont_line_1" size="2">
+                                    <figure>${v.text}</figure>
+                                    <hr class="pupR_cont_line_2" size="2">
+                                    <p>민음 BOOK SHOP</p>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <div class="btn_X" style="cursor: pointer;">
+                                <div class="btn_X_line-box">
+                                    <span class="btn_X_line-01"></span>
+                                    <span class="btn_X_line-02"></span>
+                                </div>
+                            </div>
+                            <button class="btn_prev">prev</button>
+                            <button class="btn_next">next</button>
+                        </div>`;
+                        
+                        $('.pup_wrap').html(tagsdetail);
+
+                        $('.btn_X').on('click',function(){
+                            $('.pup').hide();
+                        });
+                        //end
+                    }
+                });
+            }
 
         //     shopData.bookshop_list.forEach(function(d){
                 
