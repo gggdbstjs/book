@@ -138,21 +138,36 @@
             position:absolute;
             .btn_x{
                 position:absolute;
+                width:35px; height:35px;
+                background: url('../img/close.png') 50% 50% no-repeat;
+                border:none;
+                font-size:0;
                 right:0;
                 top:0;
-                margin:10px;
+                padding:20px;
+                cursor: pointer;
             }
             .btn_prev{
                 position:absolute;
+                width:18px; height:45px;
+                background: url('../img/prev.png') 0 0 no-repeat;
+                border:none;
+                font-size:0;
                 left:0;
                 top:50%;
                 margin:10px;
+                cursor: pointer;
             }
             .btn_next{
                 position:absolute;
+                width:18px; height:45px;
+                background: url('../img/next.png') 0 0 no-repeat;
+                border:none;
+                font-size:0;
                 right:0;
                 top:50%;
                 margin:10px;
+                cursor: pointer;
             }
         }
     }

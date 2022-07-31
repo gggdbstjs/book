@@ -155,6 +155,7 @@
                         }
 
                         p {
+                            b{font-size:0.9rem;}
                             &:nth-of-type(1) {
                                 padding: 7% 0;
                             }
@@ -234,7 +235,7 @@
             border-bottom:solid 3px #ff55da;
         }
         span.active{
-            animation: line .8s .5s ease-in forwards;
+            animation: line .8s ease-in forwards;
         }
         em{
             position:relative;
@@ -308,6 +309,138 @@
     }
 
 }
+.pup{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    display:none;
+    .pup_wrap{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width:56%;
+        height:83%;        
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border:solid 2px #000000;
+        .pup_left{
+            width:50%; height:100%;
+            border-right:solid 2px #000000;
+            position:relative;
+            figure{
+                position:absolute;
+                left:50%; top:50%;
+                transform:translate(-50%, -50%);
+                width:70%;
+                text-align:center;
+                img{
+                    width:200px;
+                    object-fit:contain;
+                    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+                }   
+                figcaption{
+                    text-align:start;
+                    margin-top:15%;
+                    h2{
+                        background-color:#471160;
+                        color:#ffffff;
+                        padding:8px;
+                        padding-right:30px;
+                        width:80%;
+                        font-size:1.6rem;
+                        height:1.8em;
+                        white-space: nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    };
+                    p{
+                        font-weight:bold;
+                        background-color:#471160;
+                        width:100%;
+                        color:#ffffff;
+                        padding:8px;
+                    };
+                }
+            }
+        };
+        .pup_right{
+            width:50%;
+            height:100%;
+            position:relative;
+            .pup_infor{
+                width:83%;
+                height:70%;
+                position:absolute;
+                left:50%; top:50%;
+                transform:translate(-50%, -50%);
+                padding:9% 0;
+                    border-top:solid 1px #000000;
+                    border-bottom:solid 1px #000000;
+                p{
+                    margin-bottom:10%;
+                    &:nth-of-type(1){}
+                    &:nth-of-type(2){}
+                    &:nth-of-type(3){
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        background-color:#471160;
+                        width:80%;
+                        color:#ffffff;
+                        padding:8px;
+                        font-size:1.1rem;
+                    }
+                }
+            }
+        }
+        .btn{
+            width:100%; height:100%;
+            position:absolute;
+            .btn_x{
+                position:absolute;
+                width:35px; height:35px;
+                background: url('../img/close.png') 50% 50% no-repeat;
+                border:none;
+                font-size:0;
+                right:0;
+                top:0;
+                padding:20px;
+                cursor: pointer;
+            }
+            .btn_prev{
+                position:absolute;
+                width:18px; height:45px;
+                background: url('../img/prev.png') 0 0 no-repeat;
+                border:none;
+                font-size:0;
+                left:0;
+                top:50%;
+                margin:10px;
+                cursor: pointer;
+            }
+            .btn_next{
+                position:absolute;
+                width:18px; height:45px;
+                background: url('../img/next.png') 0 0 no-repeat;
+                border:none;
+                font-size:0;
+                right:0;
+                top:50%;
+                margin:10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 
 .littor_wrap{
     position:relative;
