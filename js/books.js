@@ -5,7 +5,7 @@ $('footer').load('inc.html footer');
 
 let data;
 
-let idx = 0;
+let idx;
 
 
 
@@ -16,8 +16,9 @@ function abc(s, d) {
     let dataList = '';
     console.log(d)
     $.each(d.item, function (i, v) {
+         let dice = Math.ceil(Math.random() * 2)
         dataList += `
-            <li class="item" data-isbn="${v.isbn13}">
+            <li class="item" data-dice="${dice}" data-isbn="${v.isbn13}">
                 <div class="brick_left"></div>
                 <div class="book_cover">
                     <img src="${v.cover}">
@@ -27,8 +28,15 @@ function abc(s, d) {
                     <div class="brick_bot"></div>
                 </div>
             </li>`;
-    })
-
+            
+             if($('.item').data('dice') == 2){
+    
+                $('.brick_left').addClass('active')
+                 $('.brick_bot').addClass('active')
+                 $('.book_title p').addClass('active')
+             }
+        })
+        
     $('.books > div ul').html(dataList);
     $('.item').on('click', pup)
     $('.btn_x').on('click', pupX)
@@ -64,10 +72,10 @@ function dataFn(str,p,s,m) {
 ///// 서브메뉴 버튼 클릭 이벤트
 $('.category > button').on('click',function(){
     let txt = $(this).text();
-
-    $('category > button > p').eq(idx).removeClass('active');
-    $('category > button > p').addClass('active');
     idx = $(this).index();
+    
+    $('.category > button > p').removeClass('active');
+    $('.category > button > p').eq(idx).addClass('active');
 
 
     if(txt=='베스트셀러'){
@@ -89,20 +97,14 @@ function pup() {
     })
     console.log(p)
     let i = $(this).index();
-//     author: "정재율 지음"
-// categoryName: "국내도서>소설/시/희곡>시>한국시"
-// cover: "https://image.aladin.co.kr/product/29644/29/cover/8937409186_1.jpg"
-// description: "민음의 시 298권. 정재율 시인의 첫 번째 시집. 섬세하고 투명한 ‘마음’을 닮은 시편들로 꾸준한 주목을 받아 왔던 정재율 시인의 작품들이 시집이라는 ‘몸’을 가지게 된 것이다. 마음을 담은 이 한 권의 몸은 혼자인 듯 혼자가 아니고, 흔쾌히 산뜻하지만 한없이 가볍지 않으며, 불현듯 슬프지만 곱씹을수록 용감하다."
-// isbn13: "9788937409189"
-// priceStandard: 12000
-// pubDate: "2022-06-06"
-// title: "몸과 마음을 산뜻하게"
+
     
     $('.pup').css('display', 'block');
     
     pupInfo = `
     <div class="pup_infor">
                     <p>
+                        <b>제목</b> | ${ p[i].title}<br>
                         <b>분류</b> | ${ p[i].categoryName}<br>
                         <b>출판일</b> | ${ p[i].pubDate}<br>
                         <b>ISBM</b> | ${ p[i].isbn13}<br>
@@ -118,8 +120,8 @@ function pup() {
 
 
     $('.pup_left img').attr('src', `${p[i].cover}`);
-    $('.pup_title h2').text(`${p[i].title}`);
-    $('.pup_title p').text(`${p[i].author}`);
+    $('.pup_left h2').text(`${p[i].title}`);
+    $('.pup_left p').text(`${p[i].author}`);
     $('.pup_right').html(pupInfo);
     
 }
