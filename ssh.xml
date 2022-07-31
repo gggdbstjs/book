@@ -13,6 +13,471 @@
 		<name>
 			양희정 부장
 		</name>
-		
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-3985-8
+		</isbn>
 	</item>
-</items>
+	<item>
+		<title>
+			왜 옛날 얘기를 하면 엄마랑 아빠랑 말이 다르지?
+		</title>
+		<date>
+			2019.7.1
+		</date>
+		<thumb>
+			img/ssh/ssh_01.jpg
+		</thumb>
+		<name>
+			─ 『해마를 찾아서』의 번역가 안미란
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-4136-3
+		</isbn>
+	</item>
+	<item>
+		<title>
+			미생, 기생, 공생
+		</title>
+		<date>
+			2019.7.1
+		</date>
+		<thumb>
+			img/ssh/ssh_02.jpg
+		</thumb>
+		<name>
+			민음사 편집부(문학2팀) 박혜진
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-4125-7
+		</isbn>
+	</item>
+	<item>
+		<title>
+			『산소 도둑의 일기』 이상하고 기묘한 고백 혹은 고발
+		</title>
+		<date>
+			2019.7.1
+		</date>
+		<thumb>
+			img/ssh/ssh_03.jpg
+		</thumb>
+		<name>
+			담당 편집자 유상훈
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-3982-7
+		</isbn>
+	</item>
+	<item>
+		<title>
+			『올해 할리우드에 상륙할 ‘공간지각 미스터리’
+		</title>
+		<date>
+			2019.3.20
+		</date>
+		<thumb>
+			img/ssh/ssh_04.jpg
+		</thumb>
+		<name>
+			민음사 편집부 박혜진
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-2950-7
+		</isbn>
+	</item>
+	<item>
+		<title>
+			가만한 나날, 변하는 풍경―김세희 소설집 『가만한 나날
+		</title>
+		<date>
+			2019.3.13
+		</date>
+		<thumb>
+			img/ssh/ssh_05.jpg
+		</thumb>
+		<name>
+			민음사 편집부 김화진
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-3974-2
+		</isbn>
+	</item>
+	<item>
+		<title>
+			보석 같은 시간을 허투루 보내고 있지는 않나요?
+		</title>
+		<date>
+			2019.3.6
+		</date>
+		<thumb>
+			img/ssh/ssh_06.jpg
+		</thumb>
+		<name>
+			편집부 김혜원 부장
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-3977-3
+		</isbn>
+	</item>
+	<item>
+		<title>
+			『순례자 매』 소설 제목으로는 영 매력적이지 않나요?
+		</title>
+		<date>
+			2019.2.13
+		</date>
+		<thumb>
+			img/ssh/ssh_07.jpg
+		</thumb>
+		<name>
+			편집자 유상훈
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-2947-7
+		</isbn>
+	</item>
+	<item>
+		<title>
+			누가 해적왕을 죽였나?
+		</title>
+		<date>
+			2019.1.30
+		</date>
+		<thumb>
+			img/ssh/ssh_08.jpg
+		</thumb>
+		<name>
+			민음사 편집부 이황재
+		</name>
+		<detail>
+			detail.
+		</detail>
+		<isbn>
+			978-89-374-3902-5
+		</isbn>
+	</item>
+	<item>
+		<title>
+			『밤의 징조와 연인들』 우리가 밤에 할 수 있는 이야기들
+			</title>
+			<date>
+			2018.12.12
+			</date>
+			<thumb>
+			img/ssh/ssh_09.jpg
+			</thumb>
+			<name>
+			민음사 편집부 김화진
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3916-2
+			</isbn>
+		</item>
+		<item>
+			<title>
+			『크리에이티브 클래스』 오치아이 요이치, 이 사람에겐 ‘무엇’인가가 있다!
+			</title>
+			<date>
+			2018.12.5
+			</date>
+			<thumb>
+			img/ssh/ssh_10.jpg
+			</thumb>
+			<name>
+			편집부 유상훈
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3914-8
+			</isbn>
+		</item>
+		<item>
+			<title>
+			악필의 천재
+			</title>
+			<date>
+			2018.11.15
+			</date>
+			<thumb>
+			img/ssh/ssh_11.jpg
+			</thumb>
+			<name>
+			편집부 서효인
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-0872-4
+		</isbn>
+		</item>
+		<item>
+			<title>
+			당신이 없는 세계 속에서, 가끔 난 행복해
+			</title>
+			<date>
+			2018.11.7
+			</date>
+			<thumb>
+			img/ssh/ssh_12.jpg
+			</thumb>
+			<name>
+			민음사 편집부 허주미
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3905-6
+		</isbn>
+		</item>
+		<item>
+			<title>
+			『우로보로스』에만 있는 미래
+			</title>
+			<date>
+			2018.10.17
+			</date>
+			<thumb>
+			img/ssh/ssh_13.jpg
+			</thumb>
+			<name>
+			민음사 편집부 문학2팀 박혜진
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3877-6
+		</isbn>
+		</item>
+		<item>
+			<title>
+			퇴근길엔 (나를 위해) 카프카를"
+			</title>
+			<date>
+			2018.9.20
+			</date>
+			<thumb>
+			img/ssh/ssh_14.jpg
+			</thumb>
+			<name>
+			문학 1팀 박혜진
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3800-4
+		</isbn>
+		</item>
+		<item>
+			<title>
+			『위대한 식재료』 “가장 기본적인 것이 가장 위대하다.”
+			</title>
+			<date>
+			2018.8.29
+			</date>
+			<thumb>
+			img/ssh/ssh_15.jpg
+			</thumb>
+			<name>
+			민음사 편집부 김혜원
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3797-7
+		</isbn>
+		</item>
+		<item>
+			<title>
+			터키 출간 즉시 40만 부 판매, 충격적인 결말의 『빨강 머리 여인』
+			</title>
+			<date>
+			2018.8.24
+			</date>
+			<thumb>
+			img/ssh/ssh_16.jpg
+			</thumb>
+			<name>
+			민음사 편집부 박지아
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3785-4
+		</isbn>
+		</item>
+		<item>
+			<title>
+			『『미스 플라이트』 촘촘한 자수처럼, 오묘한 문양처럼―박민정의 서사
+			</title>
+			<date>
+			2018.8.23
+			</date>
+			<thumb>
+			img/ssh/ssh_17.jpg
+			</thumb>
+			<name>
+			민음사 편집부 김화진
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-7320-3
+		</isbn>
+		</item>
+		<item>
+			<title>
+			개에게 반한 디자이너의 사심 섞인 고백
+			</title>
+			<date>
+			2018.8.8
+			</date>
+			<thumb>
+			img/ssh/ssh_18.jpg
+			</thumb>
+			<name>
+			민음사 미술부 최지은
+			</name>
+			<detail>
+			detail.
+			</detail>
+			<isbn>
+			978-89-374-3756-4
+		</isbn>
+		</item>
+		<item>
+			<title>
+			페트병의 라벨을 떼 내는 일부터
+			</title>
+				<date>
+			2018.7.25
+				</date>
+				<thumb>
+			img/ssh/ssh_19.jpg
+				</thumb>
+				<name>
+			민음사 편집부 이황재
+				</name>
+				<detail>
+			detail.
+				</detail>
+				<isbn>
+			978-89-374-3741-0
+		</isbn>
+			</item>
+			<item>
+				<title>
+			이것은 평범한 이야기 『네 이웃의 식탁』
+				</title>
+				<date>
+			2018.7.19
+				</date>
+				<thumb>
+			img/ssh/ssh_20.jpg
+				</thumb>
+				<name>
+			에디터 서효인
+				</name>
+				<detail>
+			detail.
+				</detail>
+				<isbn>
+			978-89-374-7319-7
+		</isbn>
+			</item>
+			<item>
+				<title>
+			『대화를 잃어버린 사람들』 삶을 바꾸는 독서"
+				</title>
+				<date>
+			2018.7.4
+				</date>
+				<thumb>
+			img/ssh/ssh_21.jpg
+				</thumb>
+				<name>
+			민음사 편집부 양희정 부장
+				</name>
+				<detail>
+			detail.
+				</detail>
+				<isbn>
+			978-89-374-3690-1
+		</isbn>
+			</item>
+			<item>
+				<title>
+			『안목의 성장』 안목과 직업
+				</title>
+				<date>
+			2018.6.27
+				</date>
+				<thumb>
+			img/ssh/ssh_22.jpg
+				</thumb>
+				<name>
+			민음사 편집부 신새벽
+				</name>
+				<detail>
+			detail.
+				</detail>
+				<isbn>
+			978-89-374-3671-0
+		</isbn>
+			</item>
+			<item>
+				<title>
+			기술 시대의 최대 과제, 인간의 노동은 어떻게 될 것인가
+			</title>
+					<date>
+			2018.4.18
+					</date>
+					<thumb>
+			img/ssh/ssh_23.jpg
+					</thumb>
+					<name>
+			민음사 논픽션팀 김혜원
+					</name>
+					<detail>
+			detail.
+					</detail>
+					<isbn>
+			978-89-374-3681-9
+		</isbn>
+				</item>
+			</items>
