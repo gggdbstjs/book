@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hahmlet:wght@600;700;800;900&family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@200;400&display=swap");
 html,
 body {
   margin: 0;
@@ -27,6 +28,7 @@ h1, h2, h3 {
 
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 header {
@@ -344,6 +346,7 @@ footer .foot .info {
   display: inline-block;
   overflow: hidden;
   margin: 2%;
+  letter-spacing: 0.02em;
 }
 .visual_idx .visual_txt p:nth-of-type(1) b {
   display: inline-block;
@@ -353,11 +356,18 @@ footer .foot .info {
           animation: rise 0.8s linear forwards;
   -webkit-animation-delay: calc(0.5 * 1s);
           animation-delay: calc(0.5 * 1s);
+  letter-spacing: 0.02em;
+}
+.visual_idx .visual_txt p:nth-of-type(1) b span {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 .visual_idx .visual_txt p:nth-of-type(2) {
   display: inline-block;
   overflow: hidden;
   margin: 2%;
+  letter-spacing: 0.02em;
 }
 .visual_idx .visual_txt p:nth-of-type(2) b {
   display: inline-block;
@@ -367,6 +377,12 @@ footer .foot .info {
           animation: rise 0.8s linear forwards;
   -webkit-animation-delay: calc(0.5 * 2s);
           animation-delay: calc(0.5 * 2s);
+  letter-spacing: 0.02em;
+}
+.visual_idx .visual_txt p:nth-of-type(2) b span {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .best_wrap {
@@ -462,9 +478,10 @@ footer .foot .info {
   height: 100%;
 }
 .best_wrap .flipbook .pageR .info div h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 7px 0;
   letter-spacing: -0.02rem;
+  font-weight: bold;
 }
 .best_wrap .flipbook .pageR .info div b {
   font-size: 1.2rem;
@@ -479,6 +496,7 @@ footer .foot .info {
   color: #373737;
   font-size: 0.9rem;
   line-height: 1.4rem;
+  font-family: "Noto Serif KR", serif;
 }
 .best_wrap .flipbook .pageR .info div p:nth-of-type(3) {
   width: 100%;
@@ -671,6 +689,7 @@ footer .foot .info {
   letter-spacing: 0.05rem;
   line-height: 1.8rem;
   margin: 50px auto;
+  font-family: "Noto Serif KR", serif;
 }
 .story span {
   font-size: 1.25rem;
@@ -728,6 +747,7 @@ footer .foot .info {
   height: 1.2rem;
   text-align: center;
   overflow: hidden;
+  font-family: "Noto Serif KR", serif;
 }
 
 .pup {
@@ -816,6 +836,13 @@ footer .foot .info {
 }
 .pup .pup_wrap .pup_right .pup_infor p {
   margin-bottom: 10%;
+}
+.pup .pup_wrap .pup_right .pup_infor p:nth-of-type(1) b {
+  font-size: 0.8rem;
+}
+.pup .pup_wrap .pup_right .pup_infor p:nth-of-type(2) {
+  font-family: "Noto Serif KR", serif;
+  color: #3e3e3e;
 }
 .pup .pup_wrap .pup_right .pup_infor p:nth-of-type(3) {
   position: absolute;
@@ -907,6 +934,8 @@ footer .foot .info {
   font-size: 4.5rem;
   letter-spacing: 0.05rem;
   transform: translateY(-20%);
+  font-family: "Hahmlet", serif;
+  font-weight: 800;
 }
 .littor_wrap .title p {
   font-size: 2rem;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hahmlet:wght@600;700;800;900&family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@200;400&display=swap");
 html,
 body {
   margin: 0;
@@ -27,6 +28,7 @@ h1, h2, h3 {
 
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 header {
@@ -316,6 +318,10 @@ footer .foot .info {
   font-size: 18px;
   color: #3e3e3e;
   line-height: 30px;
+  font-family: "Noto Serif KR", serif;
+}
+.about_wrap .about .about_cont p b {
+  font-family: "Noto Serif KR", serif;
 }
 .about_wrap .about .about_cont figure {
   margin: 70px auto;
