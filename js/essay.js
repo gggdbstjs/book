@@ -67,7 +67,7 @@ function pup(num) {
 }
 
 $('.btn_prev').on('click',function(){
-    pup(h--);
+    if(h > 0) pup(--h);
 }) 
 $('.btn_next').on('click',function(){
     pup(++h);
