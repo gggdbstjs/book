@@ -98,7 +98,15 @@ yepnope({
         }
     })
 
+/////////////// 버튼 아이콘
+let list='';
+$('.icon_btn > a').each(function(k,v){
 
+    $(v).on('click',function(){
+        list = $('.icon_btn > a > span').eq(k).text()
+        localStorage.setItem("key1", list);
+    })
+})
 
 
 
@@ -139,7 +147,7 @@ function aaa(s, d) {
     })
 
     $('.new > .slick_new').html(dataList);
-    $('.swiper-slide').on('click', pup)
+    $('.new_item').on('click', pup)
     $('.btn_x').on('click', pupX)
 
 }
@@ -207,13 +215,59 @@ var swiper = new Swiper(".new", {
                     </div>
         ` 
     
-    
         $('.pup_left img').attr('src', `${p[i].cover}`);
         $('.pup_left h2').text(`${p[i].title}`);
         $('.pup_left p').text(`${p[i].author}`);
         $('.pup_right').html(pupInfo);
-        // $('.btn_prev').on('click', i--);
-        // $('.btn_next').on('click', i++);
+        
+        
+        $('.btn_next').on('click',function(){
+            i ++;
+        $('.pup_left img').attr('src', `${p[i].cover}`);
+        $('.pup_left h2').text(`${p[i].title}`);
+        $('.pup_left p').text(`${p[i].author}`);
+        pupInfo = `
+        <div class="pup_infor">
+                        <p>
+                            <b>제목</b> | ${ p[i].title}<br>
+                            <b>분류</b> | ${ p[i].categoryName}<br>
+                            <b>출판일</b> | ${ p[i].pubDate}<br>
+                            <b>ISBM</b> | ${ p[i].isbn13}<br>
+                            <br>
+                            <b>가격:</b> ${p[i].priceStandard}원
+                        </p>
+                        <p>
+                        ${p[i].description}
+                        </p>
+                        <p>출판사 | 민음사</p>
+                    </div>
+        ` 
+        $('.pup_right').html(pupInfo);
+        })
+    
+        $('.btn_prev').on('click',function(){
+            i --;
+        $('.pup_left img').attr('src', `${p[i].cover}`);
+        $('.pup_left h2').text(`${p[i].title}`);
+        $('.pup_left p').text(`${p[i].author}`);
+        pupInfo = `
+        <div class="pup_infor">
+                        <p>
+                            <b>제목</b> | ${ p[i].title}<br>
+                            <b>분류</b> | ${ p[i].categoryName}<br>
+                            <b>출판일</b> | ${ p[i].pubDate}<br>
+                            <b>ISBM</b> | ${ p[i].isbn13}<br>
+                            <br>
+                            <b>가격:</b> ${p[i].priceStandard}원
+                        </p>
+                        <p>
+                        ${p[i].description}
+                        </p>
+                        <p>출판사 | 민음사</p>
+                    </div>
+        ` 
+        $('.pup_right').html(pupInfo);
+        })
     }
     
     function pupX() {
@@ -234,6 +288,14 @@ $(window).on('scroll',function(){
         $('.littor_wrap > .title').addClass('active');
 
     }
+})
+$('.littor_wrap > .title').each(function(k,v){
+
+    $(v).on('click',function(){
+        list = $('.littor_wrap h2').eq(k).text()
+        localStorage.setItem("key1", list);
+        location.href= 'books.html';
+    })
 })
 
 

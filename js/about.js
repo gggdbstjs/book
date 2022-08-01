@@ -23,4 +23,12 @@ $(window).on('scroll',function(){
 
 
 
-//  각 시리즈 이미지 클릭시 '원하는 값'의 books페이지로 이동.
+//  각 시리즈 이미지 클릭시 '원하는 값'의 books페이지로 이동.let list='';
+$('.series > div').each(function(k,v){
+
+    $(v).on('click',function(){
+        list = $('.series a').eq(k).text()
+        localStorage.setItem("key1", list);
+        location.href= $(this).find('a').attr('href');
+    })
+})

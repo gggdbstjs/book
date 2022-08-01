@@ -7,7 +7,7 @@ $.ajax({
         data = xml;
         thumb();
         console.log('OK')
-        $('.grid-item').on('click', pup);
+        $('.grid-item').on('click', function(){pup($(this).index())  });
         $('.btn_x').on('click', pupX);
     }
 })
@@ -31,14 +31,14 @@ function thumb() {
     })
 }
 
-function pup() {
-    event.preventDefault();
-    let isbn = $(this).attr('data-isbn');
-    
-    let i = $(this).index();
-    
+let h=0;
 
-    $(data).find('item').each(function () {
+function pup(num) {
+    event.preventDefault();
+   
+    let isbn = $('.grid-item').eq(num).attr('data-isbn');
+    
+    $(data).find('item').each(function (k) {
         if( $(this).find('isbn').text() == isbn ) {
             let title = $(this).find('title').text();
             let date = $(this).find('date').text();
@@ -46,6 +46,7 @@ function pup() {
             let name = $(this).find('name').text();
             let detail = $(this).find('detail').html();
 
+            h=k;
             console.log(detail)
 
             pupL = `<div class="pupL_cont">
@@ -65,6 +66,12 @@ function pup() {
     
 }
 
+$('.btn_prev').on('click',function(){
+    pup(h--);
+}) 
+$('.btn_next').on('click',function(){
+    pup(++h);
+}) 
 
 function pupX() {
     $('.pup').css('display', 'none');
