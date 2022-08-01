@@ -180,7 +180,7 @@ var swiper = new Swiper(".new", {
             output: "JS",
             cover: "big",
             callback: "aaa",
-            Start: 1,
+            Start: 3,
             MaxResults: 20,
             Sort: "PublishTime"
         }

@@ -21,7 +21,9 @@ $('.category > button').each(function(k,v){
             dataFn(txt,null,'PublishTime',`${40}`);
         }
         // abc(s,d);
-        
+        let conTop = $(this).offset().top;
+
+            $('html').animate({scrollTop:conTop},0);
         setTimeout(function(){
             localStorage.removeItem("key1")
             },500)
