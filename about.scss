@@ -1,0 +1,116 @@
+@import "common";
+
+@keyframes line{
+    100%{width:70%;}
+}
+
+.visual{
+    width:80%;
+    margin:65px auto;
+    img{width:100%;}
+}
+
+.about_wrap{
+    width:80%;
+    background-color: rgba(203, 202, 202, 0.37);
+    margin:230px auto;
+    position:relative;
+    h2{
+        width:50%;
+        font-size:35px;
+        position:absolute;
+        left:0; top:0;
+        transform:translateY(-150%);
+        span{font-size:30px;}
+        p{
+            content:'';
+            position:absolute;
+            left:0; bottom:-25%;
+            width:0;
+            border-bottom:solid 6px #471160;
+        }
+        p.active{
+            animation: line 1s ease forwards;
+        }
+
+    }
+    .about{
+        display:flex;
+        .about_logo{
+            padding:150px 100px;
+            img{
+                width:393px;
+                object-fit:cover;
+            }
+        }
+        .about_cont{width:44%;
+            padding:250px 0;
+            margin-right:100px;
+            p{
+                font-size:18px;
+                color:#3e3e3e;
+                line-height:30px;
+            }
+            figure{
+                margin:70px auto;
+                position:relative;
+                img{
+                    width:110%;
+                    object-fit:cover;
+                }
+                figcaption{
+                    color:#3e3e3e;
+                    font-style: italic;
+                    font-size:18px;
+                    font-weight:bold;
+                    text-align:center;
+                    position:absolute;
+                    left:50%;
+                    bottom:0;
+                    transform:translate(-50%,-150%) 
+                }
+            }
+        }
+    }
+}
+
+.series_wrap{
+    width:80%;
+    background-color: #fff;
+    margin:230px auto;
+    position:relative;
+    h2{
+        width:50%;
+        font-size:35px;
+        position:absolute;
+        left:0; top:0;
+        transform:translateY(-150%);
+        span{font-size:30px;}
+        p{
+            position:absolute;
+            left:0; bottom:-25%;
+            width:0;
+            border-bottom:solid 6px #471160;
+        }
+        p.active{
+            animation: line 1s ease forwards;
+        }
+    }
+    .series{
+        padding:1px 0;
+        @for $i from 1 through 5{
+            .series_0#{$i} {
+                cursor:pointer;
+                font-size:0;
+                display:block;
+                width:77%;
+                margin:200px auto;
+                img{
+                    width:100%;
+                    content:url("../img/sig_0#{$i}.png")
+                }
+            }    
+        }
+    }
+    
+}
