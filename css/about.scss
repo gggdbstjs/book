@@ -101,6 +101,7 @@
         @for $i from 1 through 5{
             .series_0#{$i} {
                 cursor:pointer;
+                font-size:0;
                 display:block;
                 width:77%;
                 margin:200px auto;

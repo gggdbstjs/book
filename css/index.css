@@ -236,6 +236,18 @@ footer .foot .info {
   line-height: 20px;
 }
 
+.top div {
+  cursor: pointer;
+  width: 85px;
+  height: 85px;
+  background: url("../img/top_btn.png") 0 0 no-repeat;
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  transform: translateX(100%);
+  z-index: 999;
+}
+
 @-webkit-keyframes line {
   100% {
     width: 100%;
@@ -700,6 +712,7 @@ footer .foot .info {
   padding: 120px 0;
 }
 .new .slick_new .new_item {
+  cursor: pointer;
   z-index: 2;
   width: 200px;
 }
