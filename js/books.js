@@ -13,7 +13,9 @@ $('.category > button').each(function(k,v){
     if($(v).text() == localStorage.getItem("key1")){
         $('.category > button > p').eq(k).addClass('active');
         txt = localStorage.getItem("key1") ;
+        let conTop = $(this).offset().top;
         if(txt=='베스트셀러'){
+            conTop=0;
             dataFn('',null,'SalesPoint',`${20}`);
         }else if(txt=='신간 도서'){
             dataFn('',null,'PublishTime',`${20}`)
@@ -21,9 +23,8 @@ $('.category > button').each(function(k,v){
             dataFn(txt,null,'PublishTime',`${40}`);
         }
         // abc(s,d);
-        let conTop = $(this).offset().top;
-
             $('html').animate({scrollTop:conTop},0);
+
         setTimeout(function(){
             localStorage.removeItem("key1")
             },500)
