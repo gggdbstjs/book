@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <title>북샵 | 민음사</title>
+    <link href="./css/common.css" rel="stylesheet">
     <link href="./css/bookshop.css" rel="stylesheet">
-    <title>민음사</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script defer type="text/javascript" src="js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer type="text/javascript" src="./js/common.js"></script>
+    <script defer type="text/javascript" src="./js/bookshop.js"></script>
 
 </head>
 
 <body>
 
 <header></header>
+<div class="search">
+    <div></div>
+    <form></form>
+</div>
 
     <main>
     <div class="minum_bookshop">
@@ -105,21 +111,42 @@
                         <img src="./img/bookshop/bookclub_image05.png">
                     </div>
                 </div>
-                <button><img src="./img/bookshop/bookclub_image07.png"></button>
-                <div class="bookclub_log">
-                    <div>
-                        <div class="bookclub_log_close" style="cursor: pointer;">
-                            <div class="bookclub_log_close_line-box">
-                                <span class="bookclub_log_close_line-01"></span>
-                                <span class="bookclub_log_close_line-02"></span>
+                <button class="bookclub_join_Btn">
+                    <img src="./img/bookshop/bookclub_image07.png">
+                </button>
+                <div class="bookclub_join">
+                    <div class=".bookclub_join_main" style="background: #fff;
+                    height: 80%;
+                    position: absolute; left: 50%; top: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center; align-items: center;">
+                        <div class="bookclub_join_close" 
+                        style="cursor: pointer;
+                        position: relative; width: 34px; height: 34px;
+                            float: right; margin-right: 33px; margin-top: 33px;">
+                            <div class="bookclub_join_close_line-box"
+                            style="position: absolute; top: 50%; left: 0%;
+                            transform: translate(-50%, -50%);
+                            width: 100%; height: 100%;">
+                                <span class="bookclub_join_close_line-01"
+                                style="position: absolute; top: 50%; width: 100%;
+                                height: 2px; background-color: #000;
+                                transform: rotate(135deg) translateX(0%);"></span>
+                                <span class="bookclub_join_close_line-02"
+                                style="position: absolute; top: 50%; width: 100%;
+                                height: 2px; background-color: #000;
+                                transform: rotate(45deg) translateX(0%);"></span>
                             </div>
                         </div>
-                        <img src="./img/bookshop/bookclub_log/bookclub_log.png" class="bookclub_log_image">
-                        <p><span>죄송합니다.</span><br>
+                        <img src="./img/bookshop/bookclub_log/bookclub_log.png" class="bookclub_join_image"
+                        style="padding-top: 8%;">
+                        <p style="font-size: 50px; padding-top: 13%; line-height: 90%;">
+                            <span style="font-weight: bold;">죄송합니다.</span><br>
                             <br>
                             2022 민음 북클럽 모집이 마감되었습니다.
                         </p>
-                        <img src="./img/bookshop/bookclub_log/logo.png" class="bookclub_log_logo">
+                        <img src="./img/bookshop/bookclub_log/logo.png" class="bookclub_join_logo"
+                        style="position: absolute; bottom: 5%; right: 2.5%;">
                     </div>
                 </div>
             </div>
@@ -138,6 +165,7 @@
                         <b>상품명</b>
                         <p>가격 : 원</p>
                         <button></button>
+
                     </div>
                 </li>
                 <li>
@@ -220,239 +248,10 @@
         </div>
     </div>
 </main>
-
-<div class="top"></div>
-
+<div class="top"><div></div></div>
 <footer></footer>
+
 </body>
 
-<script>
-    
-    $(document).ready(function(){
-        $('div.bookshop_menu a').click(function(){
-            var tab_id = $(this).attr('data-tab');
-            var test_id = $(this).attr('rel');
-            $('div.bookshop_menu a').removeClass('current');
-            $('div.bookshop_tab_content').removeClass('current');
-            $('img.bookshop_main_content').removeClass('current');
-            $(this).addClass('current');
-            $("#"+tab_id).addClass('current');
-            $("#"+test_id).addClass('current');
-        })
-    })
-    
-    fetch('bookshop.json')
-        .then(function(item){    return item.json()   })
-        .then(function(shopData){ 
-    
-            const UlShop = document.querySelector('.bookshop_item ul');
-            
-            function bookshopItem(){
-                let tags = [];
-                let list = '';
-                
-                shopData.bookshop_list.forEach(function(v){            
-                    tags.push(`
-                    <li>
-                        <div class="bookshop_item_box_1">
-                            <img src="${v.main}" class="bookshop_item_first_img">
-                        </div>
-                        <div class="bookshop_item_box_2">
-                            <b>${v.item}</b>
-                            <p>가격 : ${v.price}원</p>
-                            <button>
-                                <img src="./img/heart_off.svg">
-                            </button>
-                        </div>
-                    </li>`)
-                });
-                tags.forEach(function(v){
-                list += v;
-                });
-                UlShop.innerHTML = list;
-    
-                let good = [],idx=0;
-                $('.bookshop_item_box_2 button').on('click',function(){
-                    let idx = $(this).parents('li').index();
-                    good.push(idx);
-                    localStorage.heart = good;
-                    $(this).find('img').attr('src',"./img/heart_on.svg");});
-    
-                $('.bookshop_item li').on('click',function(){
-                    idx = $(this).index();
-                    $('.pup').show();
-                    popupFn();
-                });
-                
-    
-                function popupFn(){
-                    
-                    let tagsdetail = '';
-                    shopData.bookshop_list.forEach(function(v,i){ 
-                        if(idx == i){
-                            //start
-                            tagsdetail =  `<div class="pup_left">
-                                <div class="pupL_cont">
-                                    <div class="pupL_cont_img">
-                                        <div><img src=${v.main}></div>
-                                        <ul>
-                                            <li><img src="${v.image}"></li>
-                                        </ul>
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pup_right">
-                                <div class="pupR_cont">
-                                        <h2>${v.item}</h2>
-                                        <span class="pupR_cont_price">${v.price}원</span>
-                                        <hr class="pupR_cont_line_1" size="2">
-                                        <figure>${v.text}</figure>
-                                        <hr class="pupR_cont_line_2" size="2">
-                                        <p>민음 BOOK SHOP</p>
-                                </div>
-                            </div>
-                            <div class="btn">
-                                <div class="btn_X" style="cursor: pointer;">
-                                    <div class="btn_X_line-box">
-                                        <span class="btn_X_line-01"></span>
-                                        <span class="btn_X_line-02"></span>
-                                    </div>
-                                </div>
-                                <button class="btn_prev">prev</button>
-                                <button class="btn_next">next</button>
-                            </div>`;
-                            
-                            $('.pup_wrap').html(tagsdetail);
-    
-                            $('.btn_X').on('click',function(){
-                                $('.pup').hide();
-                            });
-                            //end
-                        }
-                    });
-                }
-    
-            //     shopData.bookshop_list.forEach(function(d){
-                    
-            //         tagsdetail.push(`
-            //         <div class="pup_left">
-            //         <div class="pupL_cont">
-            //             <div class="pupL_cont_img">
-            //                 <div><img src=${d[1].main}></div>
-            //                 <ul>
-            //                     <li><img src=${d[1].image}></li>
-            //                 </ul>
-            //                 <p></p>
-            //             </div>
-            //         </div>
-            //     </div>
-            //     <div class="pup_right">
-            //         <div class="pupR_cont">
-            //                 <h2>${d[1].item}</h2>
-            //                 <span class="pupR_cont_price">${d[1].price}원</span>
-            //                 <hr class="pupR_cont_line_1" size="2">
-            //                 <figure>${d[1].text}</figure>
-            //                 <hr class="pupR_cont_line_2" size="2">
-            //                 <p>민음 BOOK SHOP</p>
-            //         </div>
-            //     </div>
-            //     <div class="btn">
-            //         <div class="btn_X" style="cursor: pointer;">
-            //             <div class="btn_X_line-box">
-            //                 <span class="btn_X_line-01"></span>
-            //                 <span class="btn_X_line-02"></span>
-            //             </div>
-            //         </div>
-            //         <button class="btn_prev">prev</button>
-            //         <button class="btn_next">next</button>
-            //     </div>`)
-            //     });
-            //     tagsdetail.forEach(function(d){
-            //     listdetail += d;
-            //     });
-            //     UlItem.innerHTML = listdetail;
-            // }
-            }
-            bookshopItem();
-            // bookshopItemDetail();
-    });
-    
-    function bookshop_Thumb(){
-        const elThumb = document.querySelectorAll('.pupL_cont_img li'),
-            elDetail = document.querySelector('.pupL_cont_img > div > img'),
-            elPtag = document.querySelector('.pupL_cont_img p');
-            let elOffset = [];
-            elThumb.forEach(function(el,key){
-                elOffset.push(
-                    {
-                        w:el.offsetWidth,
-                        h:el.offsetHeight,
-                        x:el.offsetLeft,
-                        y:el.offsetTop
-                    }                    
-                )
-                el.onclick = function(){    
-                    elDetail.src = el.children[0].src;
-                    elPtag.style = `
-                        width:${el.offsetWidth}px; 
-                        height:${el.offsetHeight}px;
-                        left:${el.offsetLeft}px; 
-                        top:${el.offsetTop}px;
-                    `;
-                }   
-            }
-        )
-    }
-        window.onload = bookshop_Thumb;
-    
-    const Bookclub_Btn = document.querySelector('.bookclub_box > button'),
-    Bokkclub_log = document.querySelector('.bookclub_log'),
-    Bookclub_Close = document.querySelector('.bookclub_log_close');
-    Bookclub_Btn.addEventListener('click',function(){
-    Bokkclub_log.classList.add('active');});
-    Bookclub_Close.addEventListener('click',function(){
-    Bokkclub_log.classList.remove('active');});
-    
-    
-    var SearchValue ;
-        searchBtn.addEventListener('click', function(){
-            SearchValue = search.value;
-            dataAjax();        
-        });
-    
-    function abc(success, data){
-        // console.log(success);        
-        let str = '';
-        let searchData = data.item.filter( (d)=>{
-                str = d.author + d.title;
-                if(str.match(SearchValue)) return d;
-            }
-        );
-        console.log(searchData)
-    }
-    
-    function dataAjax(){
-    
-        $.ajax({
-                method: "get",
-                dataType:"jsonp",
-                jsonp:"abc",
-                url: "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx",
-                data: { 
-                    Query:"민음사",
-                    QueryType:"Publisher",
-                    TTBKey:"ttbgggdbstjs1055001",
-                    output:"JS",
-                    cover:"big",
-                    callback:"abc",
-                    Sort:"Accuracy",
-                    MaxResults: "100"
-                }
-            })
-    }
-    
-    
-</script>
 
 </html>

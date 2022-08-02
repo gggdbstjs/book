@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="./css/common.css" rel="stylesheet">
     <link href="./css/search.css" rel="stylesheet">
-    <title>민음사</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script defer type="text/javascript" src="js/common.js"></script>
+    <title>검색 | 민음사</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer type="text/javascript" src="./js/common.js"></script>
 </head>
 <body>
-
-<header></header>
+    <header></header>
+    <div class="search">
+    </div>
     <main>
         <div class="resultPage">
             <img src="./img/search/logo.png" class="resultPage_logo">
@@ -25,73 +27,131 @@
             </form>
         </div>
         <div class="search_Result">
-            <b>''에 대한 검색 결과 입니다.</b>
+            <!-- <b>''에 대한 검색 결과 입니다.</b>
             <div>
                 <div>  
                     <img src="./img/bookshop/01_00.png">
                     <p>제목</p>
-                </div>
+                </div> -->
             </div>
         </div>
 
     </main>
 
-<div class="top"></div>
+<div class="top"><div></div></div>
 <footer></footer>
 
 </body>
-
 <script>
 
-const SearchBtn = document.querySelector('.search_btn_header');
-const Search = document.querySelector('.search');
-const Close = document.querySelector('.close');
-SearchBtn.addEventListener('click',function(){
-    Search.classList.add('active');
+const ResultBox = document.querySelector('.search_Result');
+const ResultBtn = document.getElementById("resultBtn");
+const Result = document.getElementById("result");
+var ResultValue ;
+ResultBtn.addEventListener('click', function(){
+    ResultValue = Result.value;
+    dataAjax();
 });
-Close.addEventListener('click',function(){
-    Search.classList.remove('active');
-});
 
-    var SearchValue ;
-    searchBtn.addEventListener('click', function(){
-        SearchValue = search.value;
-        dataAjax();
-    });
-    function abc(success, data){
-        // console.log(success);        
-        let str = '';
-        let searchData = data.item.filter( (d)=>{
-                str = d.author + d.title;
-                if(str.match(SearchValue)) return d;
-            }
-        );
-        console.log(searchData)
-    }
+function abc(success, data) {
+    let str = '';
+    let ResultData = data.item.filter( (d)=>{
+            str = d.author + d.title;
+            if(str.match(ResultValue)) return d;
+        }
+    );
+    console.log(ResultData);
+    // $.each(ResultValue, function (i, v) {
+    //     dataList += `
+    //     <b>'${ResultValue}'에 대한 검색 결과 입니다.</b>
+    //         <div>
+    //             <div>  
+    //                 <img src=url(${d.cover})>
+    //                 <p>${d.title}</p>
+    //                 <p>${d.author}</p>
+    //             </div>`;
+    //     })
+        
+    // $('.search_Result').html(dataList);
 
-    function dataAjax(){
+}
 
-        $.ajax({
-                method: "get",
-                dataType:"jsonp",
-                jsonp:"abc",
-                url: "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx",
-                data: { 
-                    Query:"민음사",
-                    QueryType:"Publisher",
-                    TTBKey:"ttbgggdbstjs1055001",
-                    output:"JS",
-                    cover:"big",
-                    callback:"abc",
-                    Sort:"Accuracy",
-                    MaxResults: "100"
-                }
-            })
-    }
-    
+function dataFn(str,p,s,m) {
+    $.ajax({
+        method: "get",
+        dataType: "jsonp",
+        jsonp: "abc",
+        url: "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx",
+        data: {
+            Query: str + ' 민음사',
+            QueryType: "",
+            TTBKey: "ttbgggdbstjs1055001",
+            output: "JS",
+            cover: "big",
+            callback: "abc",
+            Start: p,
+            MaxResults: m,
+            Sort: s
+        }
+    })
+}
+
+// const ResultBtn = document.querySelector("#resultBtn");
+// const Result = document.querySelector("#result");
+// const resultGo = document.querySelector('.search_Result');
+// var ResultValue ;
+// ResultBtn.addEventListener('click', function(){
+//     ResultValue = result.value;
+//     dataAjax();
+// //     function bookshopItem(){
+
+// //     let tags = [];
+// //     let list = '';
+
+// //     tags.push(`
+// //         <b>'${ResultValue}'에 대한 검색 결과 입니다.</b>
+// //             <div>
+// //                 <div>  
+// //                     <img src=${}}>
+// //                     <p>제목</p>
+// //                 </div>
+// //             </div>
+// //             `)
+// // }
+// });
 
 
+
+
+// function abc(success, data){
+//     let str = '';
+//     let ResultData = data.item.filter( (d)=>{
+//             str = d.author + d.title;
+//             if(str.match(ResultValue)) return d;
+//         }
+//     );
+//     console.log(ResultData);   
+//     }
+
+// function dataAjax(){
+
+// $.ajax({
+//         method: "get",
+//         dataType:"jsonp",
+//         jsonp:"abc",
+//         url: "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx",
+//         data: { 
+//             Query:"민음사",
+//             QueryType:"Publisher",
+//             TTBKey:"ttbgggdbstjs1055001",
+//             output:"JS",
+//             cover:"big",
+//             callback:"abc",
+//             Sort:"Accuracy",
+//             MaxResults: "100"
+//         }
+//     })
+// }
 </script>
-
-</body>
 </html>
+
