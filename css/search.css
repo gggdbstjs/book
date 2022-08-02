@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hahmlet:wght@600;700;800;900&family=Noto+Sans+KR:wght@300;400&family=Noto+Serif+KR:wght@200;400&display=swap");
 html,
 body {
   margin: 0;
@@ -27,6 +28,7 @@ h1, h2, h3 {
 
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 header {
@@ -234,6 +236,18 @@ footer .foot .info {
   bottom: 0;
   margin-bottom: 3%;
   line-height: 20px;
+}
+
+.top div {
+  cursor: pointer;
+  width: 85px;
+  height: 85px;
+  background: url("../img/top_btn.png") 0 0 no-repeat;
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  transform: translateX(100%);
+  z-index: 999;
 }
 
 .resultPage {
