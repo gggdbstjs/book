@@ -388,11 +388,12 @@ footer .foot .info {
   top: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  padding: 9% 0;
+  padding: 5% 0;
   border-top: solid 1px #000000;
   border-bottom: solid 1px #000000;
   font-family: "Noto Serif KR", serif;
   color: #3e3e3e;
+  white-space: pre-line;
 }
 .pup .pup_wrap .btn {
   width: 100%;
