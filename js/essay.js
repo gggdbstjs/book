@@ -40,7 +40,7 @@ function init() {
                 itemSelector: '.grid-item',
                 gutter: 70
             });
-        }, 1000)
+        }, 100)
     }
 
     let h = 0;
